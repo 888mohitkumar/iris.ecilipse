@@ -1,0 +1,113 @@
+package com.ds.binarytree;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
+
+public class BinaryTree {
+
+	public static void main(final String[] args) {
+
+		final BinaryTree tree = new BinaryTree();
+
+		tree.root = new Node(1);
+		tree.root.left = new Node(2);
+		tree.root.right = new Node(3);
+		tree.root.left.left = new Node(4);
+		tree.root.left.right = new Node(5);
+		tree.root.left.right.left = new Node(6);
+		tree.root.left.right.right = new Node(7);
+
+		// BinaryTree.printPaths(tree.root);
+
+		BinaryTree.printPathsSum(tree.root);
+	}
+
+	/* Utility that prints out an array on a line */
+	public static void printArray(final int ints[], final int len) {
+		int i;
+		for (i = 0; i < len; i++) {
+			System.out.print(ints[i] + " ");
+		}
+		System.out.println("");
+	}
+
+	public static void printPaths(final Node node) {
+		final List<Integer> list = new ArrayList();
+		printPathsRecur(node, list);
+	}
+
+	/*
+	 * Recursive helper function -- given a node, and an array containing the
+	 * path from the root node up to but not including this node, print out all
+	 * the root-leaf paths.
+	 */
+	public static void printPathsRecur(final Node node, final List<Integer> list) {
+		if (node == null) {
+			return;
+		}
+
+		/* append this node to the path array */
+		list.add(node.data);
+
+		/* it's a leaf, so print the path that led to here */
+		if (node.left == null && node.right == null) {
+			System.out.println(list);
+		} else {
+			/* otherwise try both subtrees */
+			printPathsRecur(node.left, list);
+			list.remove(list.size() - 1);
+			printPathsRecur(node.right, list);
+			list.remove(list.size() - 1);
+		}
+	}
+
+	public static void printPathsSum(final Node node) {
+		final List<Integer> list = new ArrayList();
+		printPathsSum(node, list);
+	}
+
+	public static void printPathsSum(final Node node, final List<Integer> list) {
+		if (node == null) {
+			return;
+		}
+
+		/* append this node to the path array */
+		list.add(node.data);
+
+		/* it's a leaf, so print the path that led to here */
+		if (node.left == null && node.right == null) {
+			System.out.println(list);
+			final int sum = list.stream().mapToInt(Integer::intValue).sum();
+			System.out.println(sum);
+		} else {
+			/* otherwise try both subtrees */
+			printPathsSum(node.left, list);
+			list.remove(list.size() - 1);
+			printPathsSum(node.right, list);
+			list.remove(list.size() - 1);
+		}
+	}
+	
+	public static void levelOrderSprial(Node root)
+	{
+		if(root==null)
+		{
+			return;
+		}
+		Queue<Node> q = new ArrayList();
+		
+	}
+
+	Node root;
+}
+
+class Node {
+	int data;
+	Node left, right;
+
+	Node(final int item) {
+		data = item;
+		left = right = null;
+	}
+}

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: HelloWorldSpringBoot
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: mohit.kumar
+Implementation-Vendor-Id: com.iris
+Build-Jdk: 1.8.0_152
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/HelloWorldSpringBoot
+Created-By: Maven Integration for Eclipse
+

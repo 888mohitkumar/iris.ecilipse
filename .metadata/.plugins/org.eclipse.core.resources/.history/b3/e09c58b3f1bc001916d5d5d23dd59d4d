@@ -1,0 +1,9 @@
+package com.operation;
+
+public class Artithmatic {
+	public int add(int i, int j)
+	{
+		return i+j;
+	}
+	
+}

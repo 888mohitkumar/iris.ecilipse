@@ -1,0 +1,10 @@
+package iris.com;
+
+public class MyThread1 implements Runnable {
+
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

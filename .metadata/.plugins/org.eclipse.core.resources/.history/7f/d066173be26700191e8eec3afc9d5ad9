@@ -1,0 +1,49 @@
+class Bulb
+{
+	public volatile int state=0;
+}
+
+
+class Person implements Runnable 
+{
+
+	Bulb bulb;
+	Person(Bulb bulb)
+	{
+		this.bulb=bulb;
+	}
+	@Override
+	public void run() {
+		if(bulb.state ==0)
+		{
+			System.out.println("BULB is off so nedd to on");
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			bulb.state=1;
+		}
+		else
+		{
+			System.out.println("BULB is ON so nedd to OFF");
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}			
+			bulb.state=0;
+		}
+	}
+	
+}
+
+public class BulbOnOff {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

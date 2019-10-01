@@ -1,0 +1,14 @@
+package DS.com.ds.Array;
+
+public class SubArrayWithGivenSum {
+
+	public static void main(final String[] args) {
+		final int arr[] = {};
+		mySubArrayWithGivenSum();
+	}
+
+	private static void mySubArrayWithGivenSum() {
+
+	}
+
+}

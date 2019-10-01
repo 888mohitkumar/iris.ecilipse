@@ -1,0 +1,53 @@
+class Bulb {
+	public volatile int state = 0;
+}
+
+public class BulbOnOff {
+
+	public static void main(final String[] args) {
+		final Bulb bulb = new Bulb();
+
+		final Person person[] = new Person[20];
+		for (int i = 0; i < person.length; i++) {
+			person[i] = new Person(bulb);
+			person[i].setName("Thread-" + (i + 1));
+			person[i].start();
+		}
+	}
+
+}
+
+class Person extends Thread {
+
+	Bulb bulb;
+
+	Person(final Bulb bulb) {
+		this.bulb = bulb;
+	}
+
+	@Override
+	public void run() {
+		synchronized (bulb) {
+			if (bulb.state == 0) {
+				System.out.println("OFF          BULB is off so nedd to on:::" + Thread.currentThread().getName());
+				try {
+					Thread.sleep(3000);
+				} catch (final InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				bulb.state = 1;
+			} else {
+				System.out.println("ON           BULB is ON so nedd to OFF:::" + Thread.currentThread().getName());
+				try {
+					Thread.sleep(2000);
+				} catch (final InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				bulb.state = 0;
+			}
+		}
+	}
+
+}

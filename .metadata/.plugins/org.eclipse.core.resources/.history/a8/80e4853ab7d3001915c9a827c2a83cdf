@@ -1,0 +1,16 @@
+package iris.com;
+
+import java.util.concurrent.CyclicBarrier;
+
+public class CyclicBarrierDemo {
+
+	public static void main(final String[] args) {
+
+		final CyclicBarrier cb = new CyclicBarrier(2);
+
+		final MyThread1 t1 = new MyThread1(cb);
+		final MyThread1 t2 = new MyThread1(cb);
+
+	}
+
+}

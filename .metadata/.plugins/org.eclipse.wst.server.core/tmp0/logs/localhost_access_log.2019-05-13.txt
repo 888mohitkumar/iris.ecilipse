@@ -1,0 +1,15 @@
+127.0.0.1 - - [13/May/2019:17:49:51 +0530] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [13/May/2019:17:49:52 +0530] "GET /springRestExample/ HTTP/1.1" 200 57
+0:0:0:0:0:0:0:1 - - [13/May/2019:17:50:26 +0530] "GET /springRestExample/employees HTTP/1.1" 200 448
+0:0:0:0:0:0:0:1 - - [13/May/2019:17:50:26 +0530] "GET /springRestExample/employees HTTP/1.1" 200 448
+0:0:0:0:0:0:0:1 - - [13/May/2019:17:50:42 +0530] "GET /springRestExample/employees HTTP/1.1" 200 448
+0:0:0:0:0:0:0:1 - - [13/May/2019:17:50:42 +0530] "GET /springRestExample/employees HTTP/1.1" 200 448
+0:0:0:0:0:0:0:1 - - [13/May/2019:17:51:13 +0530] "GET /springRestExample HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [13/May/2019:17:51:13 +0530] "GET /springRestExample/ HTTP/1.1" 200 57
+0:0:0:0:0:0:0:1 - - [13/May/2019:17:52:19 +0530] "GET /springRestExample/ HTTP/1.1" 200 57
+0:0:0:0:0:0:0:1 - - [13/May/2019:17:55:08 +0530] "GET /springRestExample/employees HTTP/1.1" 200 448
+0:0:0:0:0:0:0:1 - - [13/May/2019:17:55:20 +0530] "GET /springRestExample/employees/1 HTTP/1.1" 200 187
+0:0:0:0:0:0:0:1 - - [13/May/2019:17:58:19 +0530] "GET /springRestExample/employees HTTP/1.1" 200 448
+127.0.0.1 - - [13/May/2019:17:59:09 +0530] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [13/May/2019:17:59:09 +0530] "GET /springRestExample/ HTTP/1.1" 200 57
+0:0:0:0:0:0:0:1 - - [13/May/2019:17:59:14 +0530] "GET /springRestExample/employees HTTP/1.1" 200 457

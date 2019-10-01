@@ -1,0 +1,57 @@
+package com.ds.ciena;
+
+import java.util.*;
+
+public class LruCache {
+
+	public static void main(String[] args) {
+	
+	}
+	
+	public static void LRU(List<Integer> list)
+	{
+		HashMap<Integer,Integer> hashMap = new HashMap<>();
+		TreeMap<Integer,Integer> tmap = new TreeMap<>(new Comparator<Integer>() {
+
+			@Override
+			public int compare(Integer o1, Integer o2) {
+				int key1 = o1;
+				int key2=o2;
+				int value1 =hashMap.get(key1);
+				int value2 =hashMap.get(key2);
+				return value1-value2;
+			}
+		});
+		List<Integer> cache = new ArrayList<Integer>();
+		int number =0;
+		for(Integer key : list)
+		{
+			System.out.println("value demand is :::::::::"+key);
+			System.out.println("cache current elements ::"+cache);
+			if(cache.contains(key))
+			{
+				hashMap.put(key, number+=number);
+			}
+			else
+			{
+				if(cache.size()>=3)
+				{
+					tmap.clear();
+					tmap.putAll(hashMap);
+					int lastPage =tmap.lastKey();
+					list.remove(new Integer(lastPage));
+					hashMap.remove(lastPage);
+					list.add(key);
+					hashMap.put(key, number+=number);
+				}
+				else
+				{
+					cache.add(key);
+					hashMap.put(key, number+=number);
+				}
+			}
+		}
+	}
+			
+
+}

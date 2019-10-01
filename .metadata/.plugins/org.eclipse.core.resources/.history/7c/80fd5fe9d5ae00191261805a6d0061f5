@@ -1,0 +1,42 @@
+package com.ds.ciena;
+
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingDeque;
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class FiveTon {
+
+	public static void main(final String[] args) {
+		System.out.println(ThreeTonClass.getInstance().hashCode());
+		System.out.println(ThreeTonClass.getInstance().hashCode());
+		System.out.println(ThreeTonClass.getInstance().hashCode());
+		System.out.println(ThreeTonClass.getInstance().hashCode());
+		System.out.println(ThreeTonClass.getInstance().hashCode());
+		System.out.println(ThreeTonClass.getInstance().hashCode());
+
+	}
+
+}
+
+class ThreeTonClass {
+
+	private static ThreeTonClass instance = null;
+	private static volatile AtomicInteger counter = new AtomicInteger(0);new ArrayBlockingQueue<ThreeTonClass>(3);
+	static {
+
+	}
+
+	public static synchronized ThreeTonClass getInstance() {
+		if (counter.get() >= 3) {
+			return instance;
+		}
+		counter.incrementAndGet();
+		instance = new ThreeTonClass();
+		return instance;
+
+	}
+
+	private ThreeTonClass() {
+	}
+
+}

@@ -1,0 +1,26 @@
+package iris.com;
+
+import java.util.concurrent.CyclicBarrier;
+
+public class CyclicBarrierDemo {
+
+	public static void main(final String[] args) {
+
+		final CyclicBarrier cb = new CyclicBarrier(2);
+
+		final MyThread1 t1 = new MyThread1(cb);
+		final MyThread1 t2 = new MyThread1(cb);
+
+		final Thread t3 = new Thread(t1);
+		t3.start();
+
+		System.out.println("inside main thread");
+
+		final Thread t4 = new Thread(t2);
+		t4.start();
+
+		System.out.println("inside main thread");
+
+	}
+
+}

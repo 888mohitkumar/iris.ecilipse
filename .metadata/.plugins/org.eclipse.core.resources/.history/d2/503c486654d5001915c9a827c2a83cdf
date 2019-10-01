@@ -1,0 +1,29 @@
+package com.nagarro;
+
+import java.util.HashMap;
+
+public class MajorityElement {
+
+	public static void main(final String[] args) {
+		System.out.println(MajorityElementTest(new int[] {}));
+		System.out.println(MajorityElementTest(new int[] { 1, 2, 1, 2, 2 }));
+	}
+
+	public static int MajorityElementTest(final int arr[]) {
+		final HashMap<Integer, Integer> map = new HashMap();
+		for (final int key : arr) {
+			if (map.containsKey(key)) {
+				map.put(key, map.get(key) + 1);
+			} else {
+				map.put(key, 1);
+			}
+			final int count = map.get(key);
+			System.out.println("count is ::"+count);
+			//System.out.println("count is ::"+count);
+			if (count >= arr.length / 2) {
+				return key;
+			}
+		}
+		return -1;
+	}
+}

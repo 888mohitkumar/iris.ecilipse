@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;private static void sortByFrequency1()&apos; from &apos;SortByFrequency.main()&apos; to &apos;SortByFrequency&apos;&#x0D;&#x0A;- Original project: &apos;Test&apos;&#x0D;&#x0A;- Method name: &apos;sortByFrequency1&apos;&#x0D;&#x0A;- Destination type: &apos;SortByFrequency&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;sortByFrequency1&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;{SortByFrequency.java" name="sortByFrequency1" replace="false" selection="141 586" stamp="1560850556259" version="1.0" visibility="2"/>
+</session>

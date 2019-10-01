@@ -1,0 +1,32 @@
+package com.nagarro;
+
+public class ModifyVariable {
+
+	public static void main(final String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static String ModifyVariableTest(final String str) {
+		final StringBuilder sb = new StringBuilder();
+		Boolean flag = false;
+		if (str.contains("_"))// c++ variable
+		{
+			for (int i = 0; i < str.length(); i++) 
+			{
+				if (str.charAt(i) == '_') {
+					flag = true;
+
+				} else if (flag) {
+					flag = false;
+					sb.append(Character.toUpperCase(str.charAt(i)));
+				} else {
+					sb.append(str.charAt(i));
+				}
+			}
+		} else // java Variable
+		{
+
+		}
+	}
+}

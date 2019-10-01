@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestApplication" project="Junit5_Test" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.test.TestApplication" time="0.021">
+    <testsuite name="JUnit Jupiter" time="0.021">
+      <testsuite name="TestApplication" time="0.021">
+        <testcase name="My First Test" classname="TestApplication" time="0.013"/>
+        <testcase name="My Assert All example" classname="TestApplication" time="0.003"/>
+        <testcase name="enabledRun()" classname="TestApplication" time="0.005"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

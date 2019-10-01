@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;private static void case1()&apos; from &apos;com.nagarro.MultipleChoice.main()&apos; to &apos;com.nagarro.MultipleChoice&apos;&#x0D;&#x0A;- Original project: &apos;com.ds.iris&apos;&#x0D;&#x0A;- Method name: &apos;case1&apos;&#x0D;&#x0A;- Destination type: &apos;com.nagarro.MultipleChoice&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;case1&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src\/main\/java&lt;com.nagarro{MultipleChoice.java" name="case1" replace="false" selection="161 119" stamp="1562564965463" version="1.0" visibility="2"/>
+</session>

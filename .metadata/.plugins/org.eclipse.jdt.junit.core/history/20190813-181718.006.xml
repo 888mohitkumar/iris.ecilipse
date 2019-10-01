@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestApplication" project="Junit5_Test" tests="5" started="5" failures="0" errors="0" ignored="3">
+  <testsuite name="com.test.TestApplication" time="0.009">
+    <testsuite name="JUnit Jupiter" time="0.009">
+      <testsuite name="TestApplication class" time="0.009">
+        <testcase name="enabledRun()" classname="TestApplication class" time="0.0" ignored="true"/>
+        <testcase name="My Assert All example" classname="TestApplication class" time="0.0" ignored="true"/>
+        <testcase name="My First Test" classname="TestApplication class" time="0.0" ignored="true"/>
+        <testsuite name="AddMethods" time="0.009">
+          <testcase name="displayNegative" classname="AddMethods" time="0.006"/>
+          <testcase name="displayPositive" classname="AddMethods" time="0.003"/>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>
